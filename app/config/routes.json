@@ -1,0 +1,24 @@
+{
+  "_null":{
+    "request":"",
+    "referer":""
+
+  },
+  "\/":{
+    "request":"home",
+    "referer":""
+
+  },
+  "home":{
+    "request":"home",
+    "referer":"",
+    "navbar":{
+      "name":"Home",
+      "url":"",
+      "type":"page"
+
+    }
+
+  }
+
+}

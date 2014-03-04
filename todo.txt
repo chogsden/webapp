@@ -1,0 +1,8 @@
+*** development todo list ***
+
+- Clean out redundant code in main.css (brought over from previous projects)
+
+- Create start-up documentation
+
+- Develop a database schema logging procedure (like that used in rails)
+

@@ -1,0 +1,77 @@
+--- ROUTES FILE ---
+    
+    Provides core app rules:
+      linking client URL request to MVC structure,
+      page back controller (the referer),
+      top menu criteria
+
+    routes.json needs to be edited for all additional sections that need to link the URL request to a controller and subsequent model and view. Additional routes must always assume the following structure:
+
+    "section_name":{
+      "request":"controller_name",
+      "referer":""
+    }
+
+    Menu criteria must be incliuded for a section to appear in the top navigation bar. This should assume two formats depending upon whether the menu item links to a single page or displays a drop down menu of links to pages:
+    
+    For a single page link:
+    
+    "navbar":{
+      "name":"menu name to display",
+      "url":"section name\/",
+      "type":"page"
+    }
+
+    For menu of links sourced from a database table via a model:
+
+    "navbar":{
+      "name":"menu name to display",
+      "url":"section name\/",
+      "type":"list",
+      "source":{
+        "type":"model",
+        "model":{
+          "name":"model name",
+          "field":"db table field containing display name"
+        }
+      }
+    }
+
+    For menu of links included in routes.json:
+
+    "navbar":{
+      "name":"menu name to display",
+      "url":"section name\/",
+      "type":"list",
+      "source":{
+        "type":"list",
+        "items":{
+          "1":{
+            "id":"item 1 id tag",
+            "name":"item 1 display name"
+          }
+        }
+      }
+    }
+
+
+
+---  Default routes.json:
+
+{
+  "_null":{
+    "request":"",
+    "referer":""
+  }
+
+  "\/":{
+    "request":"home",
+    "referer":""
+  },
+
+  "home":{
+    "request":"home",
+    "referer":"
+  }
+  
+}

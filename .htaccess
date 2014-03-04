@@ -1,0 +1,23 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+## Section rules:
+RewriteRule ^home index.php
+
+# Core asset rules:
+RewriteRule ^image(.*)$ app/assets/images/$1
+RewriteRule ^css(.*)$ app/assets/css$1
+RewriteRule ^jscript(.*)$ app/assets/js$1
+RewriteRule ^icons(.*)$ app/assets/icons$1
+
+## Rules to prevent unauthorised access to core directories:
+RewriteRule ^app/controllers(.*) app/views/shared/_404.html
+RewriteRule ^app/models(.*) app/views/shared/_404.html
+RewriteRule ^app/views(.*) app/views/shared/_404.html
+RewriteRule ^app/core(.*) app/views/shared/_404.html
+RewriteRule ^app/config(.*) app/views/shared/_404.html
+RewriteRule ^_system(.*) app/views/shared/_404.html
+
+<FilesMatch "\.(xml|txt|css|js)$">
+	Header set Cache-Control "max-age=172800, proxy-revalidate"
+</FilesMatch>

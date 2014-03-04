@@ -1,0 +1,24 @@
+<!-- //  FLEXSLIDER JQuery plugin: http://www.woothemes.com/flexslider/
+
+HTMl to include:
+
+-->
+
+<div class="flexslider">
+	<ul class="slides">
+		<li><img src="'.$config['domain'].$config['root_dir'].$config['image_path_large'].$image_id.'.jpg" class="img-responsive" alt="'.$content['short_title'].'" /></li>
+	</ul>
+</div>
+
+<!-- In the view add in plugin javascript call inside $js_content:
+-->
+
+<script src="app/assets/js/jquery.flexslider-min.js"></script>
+<script>
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+	        animation: "fade"	// image fade runs on page load
+        	slideshow: false
+        });
+    });
+</script>
