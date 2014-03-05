@@ -13,7 +13,7 @@
 			$model[$key] = $data['navbar'];
 		}
 	}
-	print_r($model);
+//	print_r($model);
 
 	// Print to screen for command-line acess:
 	if(isset($argv[0])) {

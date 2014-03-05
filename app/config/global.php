@@ -76,6 +76,7 @@
 		'db_user'			=>	'',		// MySQL user name
 		'db_pass'			=>	'',		// Mysql user password
 		'db'				=>	'',		// WebApp MySQL database
+	);
 
 
 //	error_reporting(0);		// Set to true (1) in production mode to turn off PHP error reporting
