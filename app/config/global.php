@@ -75,7 +75,7 @@
 		'db_server'			=>	'localhost',	// MySQL server
 		'db_user'			=>	'chogsden',		// MySQL user name
 		'db_pass'			=>	'',				// Mysql user password
-		'db'				=>	'webapp',		// WebApp MySQL database
+		'db'				=>	'',		// WebApp MySQL database
 
 
 //	error_reporting(0);		// Set to true (1) in production mode to turn off PHP error reporting
