@@ -73,10 +73,10 @@
 	// MySQL database configuration:
 	$db_config = array(
 		'db_server'			=>	'localhost',	// MySQL server
-		'db_user'			=>	'',				// MySQL user name
+		'db_user'			=>	'chogsden',		// MySQL user name
 		'db_pass'			=>	'',				// Mysql user password
-		'db'				=>	'',				// WebApp MySQL database
-	);
+		'db'				=>	'webapp',		// WebApp MySQL database
+
 
 //	error_reporting(0);		// Set to true (1) in production mode to turn off PHP error reporting
 
