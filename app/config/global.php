@@ -52,7 +52,7 @@
 			// This is additional to http://host/root_dir/route_request/ element1/element2/element3 etc...
 			// e.g. to only parse numbers in addition to the default allowance for anything appearing after http://host/root_dir/route_request/:
 			// (^[1-9][0-9]*$)
-			
+
 			'',
 
 		),
@@ -72,10 +72,10 @@
 
 	// MySQL database configuration:
 	$db_config = array(
-		'db_server'			=>	'',		// MySQL server
-		'db_user'			=>	'',		// MySQL user name (read only)
-		'db_pass'			=>	'',		// Mysql user password
-		'db'				=>	'',		// WebApp MySQL database
+		'db_server'			=>	'localhost',	// MySQL server
+		'db_user'			=>	'',				// MySQL user name
+		'db_pass'			=>	'',				// Mysql user password
+		'db'				=>	'',				// WebApp MySQL database
 	);
 
 //	error_reporting(0);		// Set to true (1) in production mode to turn off PHP error reporting
