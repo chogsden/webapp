@@ -4,7 +4,7 @@
 	if(isset($argv[0])) {
 		require_once('app/config/global.php');
 		require_once('app/core/functions.php');
-//		$request_parameters['route_request'] = '_null';
+		$request_parameters['route_request'] = '_null';
 	}
 
 	// Get data from the navbar model:
@@ -21,20 +21,27 @@
 	$content['navbar']['home'] = '';
 	foreach($model as $id => $data) {
 
-		// Set view navbar home link:
-		if($data['type'] == 'page') {
-			$content['navbar'][$id] = '
-			<li><a href="'.$config['domain'].$config['root_dir'].$data['url'].'">'.$data['name'].'</a></li>
-			';
+		// Set view navbar with a sngle page link:
+		if($data['type'] == 'link') {
+			
+			// To set single link within a group of navbar links:
+			if(!empty($data['group'])) {
+				$content['navbar'][$data['group']]['type'] = 'list';
+				$content['navbar'][$data['group']]['name'] = $data['group'];
+				$content['navbar'][$data['group']]['items'][$id] = array('url' => $data['url'], 'name' => $data['name']);
+			} else {
+				$content['navbar'][$id] = array('type' => 'link', 'url' => $data['url'], 'name' => $data['name']);
+			}
 
-		// Set view navbar for a menu of links:
+		// Set view navbar with a menu of sub-section links:
 		} elseif($data['type'] == 'list') {
 			$list_html = array();
+			$content['navbar'][$id] = array('type' => 'list', 'name' => $id, 'items' => array());
 
 			// Where the menu items are listed in app/core/routes.json:
 			if($data['source']['type'] == 'list') {
-				foreach($data['source']['items'] as $item) {
-					$list_html[] = '<li><a href="'.$config['domain'].$config['root_dir'].$data['url'].$item['id'].'/">'.$item['name'].'</a></li>';
+				foreach($data['source']['items'] as $item_id => $item) {
+					$content['navbar'][$id]['items'][$item_id] = array('url' => $data['url'].$item_id, 'name' => $item['name']);
 				}
 
 			// Where the menu items are in a database table and accessd via a model:	
@@ -42,26 +49,11 @@
 				$data_filter = 0;
 				require('app/models/'.$data['source']['model']['name'].'.php');
 				foreach($model as $item_id => $item) {
-					$list_html[] = '<li><a href="'.$config['domain'].$config['root_dir'].$data['url'].$item_id.'/">'.$item[$data['source']['model']['field']].'</a></li>';
+					$content['navbar'][$id]['items'][] = array('url' => $data['url'].$item_id, 'name' => $item[$data['source']['model']['field']]);
 				}
 			}
-			
-			$content['navbar'][$id] = '
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">'.$data['name'].' <b class="fa fa-caret-down fa-1x black"></b></a>
-				<ul class="dropdown-menu">
-				    '.implode('', $list_html).'
-				</ul>
-			</li>
-			';
-
 		}
-		if($id != 'home' AND $request_parameters['route_request'] == $id) {
-			$content['navbar'][$id] = preg_replace('@<a href@', '<a style="color: #FFF;" href', $content['navbar'][$id]);
-		}
-		
 	}
-
 //	print_r($content['navbar']);
 
 	// Send the content to the view:

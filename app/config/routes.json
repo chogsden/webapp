@@ -15,7 +15,8 @@
     "navbar":{
       "name":"Home",
       "url":"",
-      "type":"page"
+      "type":"link",
+      "group":""
 
     }
 

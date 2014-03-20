@@ -14,12 +14,22 @@
 
     Menu criteria must be incliuded for a section to appear in the top navigation bar. This should assume two formats depending upon whether the menu item links to a single page or displays a drop down menu of links to pages:
     
-    For a single page link:
+    For a single link:
     
     "navbar":{
       "name":"menu name to display",
       "url":"section name\/",
-      "type":"page"
+      "type":"page",
+      "group":""
+    }
+
+    For a menu of single links set group to the name for the list that should appear in the navigation bar:
+
+    "navbar":{
+      "name":"menu name to display",
+      "url":"section name\/",
+      "type":"page",
+      "group":"A List of other items"
     }
 
     For menu of links sourced from a database table via a model:
@@ -46,8 +56,7 @@
       "source":{
         "type":"list",
         "items":{
-          "1":{
-            "id":"item 1 id tag",
+          "item1 id":{
             "name":"item 1 display name"
           }
         }
@@ -72,6 +81,12 @@
   "home":{
     "request":"home",
     "referer":"
+    "navbar":{
+      "name":"Home",
+      "url":"",
+      "type":"link",
+      "group":""
+    }
   }
   
 }

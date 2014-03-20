@@ -4,6 +4,8 @@
 	if(isset($argv[0])) {			
 		require_once('app/config/global.php'); 
 		require_once('app/core/functions.php');
+		$routes = json_decode(file_get_contents('app/config/routes.json'), true);
+//		print_r($routes);
 		$show_model_output = true;
 	}
 
@@ -13,7 +15,6 @@
 			$model[$key] = $data['navbar'];
 		}
 	}
-//	print_r($model);
 
 	// Print to screen for command-line acess:
 	if(isset($argv[0])) {

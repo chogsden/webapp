@@ -10,11 +10,11 @@
 
 		<!-- Styles -->
 		<?PHP echo('
-		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'css/font-awesome.min.css">
-		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'css/animate.css">
-		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'css/bootstrap.min.css">
-		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'css/main.css">
-		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'css/custom-styles.css">
+		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/font-awesome.min.css">
+		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/animate.css">
+		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/main.css">
+		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/custom-styles.css">
 		'); ?>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" type="text/css">
 
