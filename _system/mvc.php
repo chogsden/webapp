@@ -19,10 +19,23 @@ $mvc = array(
 	$sql_filter = \'\';
 	$mysql_return = mysqlQuery(
 						$db_config,
+
 						\'SELECT\', 
-						\'* FROM '.$section.'\',
+						
+						\'*\',
+						
+						\''.$section.'\',
+
+						\'\',
+
+						\'\',
+
+						\'\',
+						
 						\'id\',
+						
 						false,
+						
 						$show_model_output
 					);
 	$model = $mysql_return[\'response\'];
@@ -51,7 +64,7 @@ $mvc = array(
 				<div class="col-sm-12 text-center">
 
 					<!-- Section content goes here -->
-					<p>\'.$content[\''.$section.'\'].\'</>
+					<p>\'.$content[\''.$section.'\'].\'</p>
 
 				</div>
 			</div>

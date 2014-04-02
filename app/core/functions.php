@@ -102,14 +102,25 @@
 	}
 
 	// Function to query MySQL database and return result:
-	function mysqlQuery($db_config, $type, $qry, $id_field, $show_time, $show_model_output) {
+	function mysqlQuery($db_config, $type, $fields, $tables, $filter, $order, $limit, $id_field, $show_time, $show_model_output) {
 		mysqlAccess($db_config);
-//		echo($qry.chr(10));
 		$start_time = getMicrotime();
 		$result = false;
 		$echo_query = false;
 //		$show_time = true;
-		$res = mysql_query($type.' '.$qry);
+		$count = '';
+		$check_for_count = preg_replace_callback(
+			'@(SELECT) (COUNT)@',
+			function($matches) use (&$type, &$count) {
+//				print_r($matches);
+				$type = $matches[1];
+				$count = $matches[2];
+			},
+			$type
+		);
+		$qry = $type.' '.$fields.' FROM '.$tables.' '.$filter.' '.$order.' '.$limit;
+//		echo($qry);
+		$res = mysql_query($qry);
 		if($show_time == true) {
 			echo(stopMicrotime($start_time));
 		}
@@ -121,18 +132,18 @@
 		} else {
 
 			// SELECT query:
-			if($type == 'SELECT') {
+			if(strstr('SELECT', $type)) {
 				$echo_query = true;
 				if(mysql_num_rows($res) == true) {
 					while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
-						$result[$row[$id_field]] = $row;
+						$result['records'][$row[$id_field]] = $row;
 					}
 				} else {
 					$result = array();
 				}
-				if(strstr($qry, 'SQL_CALC_FOUND_ROWS') == true) {
-					$foundrows = mysql_query("SELECT FOUND_ROWS()");
-					$result['total_records'] = mysql_result($foundrows,0);
+				if($count == true) {
+					$count_res = mysql_query('SELECT COUNT(*) as rec_count FROM '.$tables.' '.$filter);
+					$result['record_count'] = mysql_result($count_res,0, 'rec_count');
 				}
 
 			// SHOW query:	
