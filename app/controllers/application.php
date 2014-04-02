@@ -16,9 +16,6 @@
 
 	$show_model_output = false;
 
-	// Request navbar controller:
-	require('app/controllers/navbar.php');
-
 	// Request section controller:
 	require('app/controllers/'.$request_parameters['route_request'].'.php');
 
@@ -48,6 +45,12 @@
 
 	// Output route:
 	if($request_parameters['output_format'] == 'html') {
+
+		// Set up navbar:
+		require('app/helpers/navbar.php');
+
+		// Get navbar display:
+		require('app/views/shared/navbar.php');
 
 		// If html is expected, send display content to application view:
 		require('app/views/'.$request_parameters['app_view'].'.php');
