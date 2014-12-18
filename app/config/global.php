@@ -15,10 +15,7 @@
 		'root_dir'			=>	'webapp/',
 
 		// Paths to image directories:
-		'image_path'		=>	'image/',
-		'image_path_small'	=>	'image/small/',
-		'image_path_medium'	=>	'image/medium/',
-		'image_path_large'	=>	'image/large/',
+		'media_path'		=>	'media/',
 
 		// Client mobile devices to identify:
 		'mobile_agents' 	=> array(
@@ -78,8 +75,7 @@
 		'db'				=>	'',		// WebApp MySQL database
 	);
 
-
-//	error_reporting(0);		// Set to true (1) in production mode to turn off PHP error reporting
+//	error_reporting(false);		// use in production mode to turn off PHP error reporting
 
 
 ?>
