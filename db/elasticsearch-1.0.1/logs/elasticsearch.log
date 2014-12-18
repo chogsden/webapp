@@ -1,0 +1,1693 @@
+[2014-11-20 12:28:05,613][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0xb2a4c3c6, /192.168.1.71:51275 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,617][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0xf0deefaf, /192.168.1.71:51268 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,616][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0xfd0b6116, /192.168.1.71:51269 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,616][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x738b97cf, /192.168.1.71:51269 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,616][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x09b81517, /192.168.1.71:51270 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,616][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x99e35215, /192.168.1.71:51263 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,615][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x32f57c2c, /192.168.1.71:51271 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,615][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0xb7383d21, /192.168.1.71:51268 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,615][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0xb93ca4a2, /192.168.1.71:51270 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,614][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0xf1af8445, /192.168.1.71:51272 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,614][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0xa69e0163, /192.168.1.71:51273 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,614][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x86bde360, /192.168.1.71:51273 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,614][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x32590b19, /192.168.1.71:51274 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,614][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x6776e9aa, /192.168.1.71:51272 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,613][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x1b8d33f3, /192.168.1.71:51274 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,613][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x57ee4201, /192.168.1.71:51275 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,799][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0xc99f3526, /192.168.1.71:51266 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,798][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x4879fbf2, /192.168.1.71:51265 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,798][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x02d02ead, /192.168.1.71:51264 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,795][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0xf2fd847d, /192.168.1.71:51271 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:28:05,791][WARN ][transport.netty          ] [Alyssa Moy] exception caught on transport layer [[id: 0x0a681947, /192.168.1.71:51267 => /192.168.1.71:9300]], closing connection
+java.io.IOException: Operation timed out
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-11-20 12:30:39,506][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 12:34:39,909][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 12:38:40,264][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 12:42:40,707][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 12:46:41,007][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 12:50:41,309][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 12:54:41,608][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 12:58:41,906][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:02:42,207][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:06:42,507][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:10:42,857][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:14:43,164][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:18:43,456][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:22:43,807][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:26:44,108][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:30:44,407][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:34:44,707][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:38:45,006][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:42:45,359][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:46:45,667][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:50:46,008][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:54:46,307][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 13:58:46,602][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:02:47,007][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:06:47,301][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:10:47,532][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:14:47,805][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:18:48,262][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:22:48,555][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:26:48,855][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:30:49,207][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:34:49,502][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:38:49,807][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:42:50,157][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:46:50,607][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:50:50,907][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:54:51,207][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 14:58:51,563][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:02:51,963][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:06:52,305][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:10:52,607][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:14:52,907][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:18:53,210][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:22:53,507][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:26:53,807][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:30:54,107][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:34:54,407][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:38:54,708][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:42:55,011][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:46:55,406][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:50:55,708][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:54:56,007][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 15:58:56,308][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:02:56,608][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:06:56,908][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:10:57,207][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:14:57,507][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:18:57,807][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:22:58,106][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:26:58,406][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:30:58,708][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:34:59,006][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:38:59,307][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:42:59,606][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:46:59,962][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:51:00,308][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:55:00,610][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 16:59:00,907][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 17:03:01,208][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 17:07:01,508][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 17:11:01,805][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 17:15:02,107][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 17:19:02,407][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 17:23:02,707][WARN ][cluster.service          ] [Alyssa Moy] failed to reconnect to node [Alyssa Moy][aLGiqzVzSjWqpqmc9YZaNg][carl-hogsden.lan][inet[/192.168.1.71:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Alyssa Moy][inet[/192.168.1.71:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:718)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:647)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:615)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:129)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:515)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.netty.channel.ConnectTimeoutException: connection timed out: /192.168.1.71:9300
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:137)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:83)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2014-11-20 17:23:38,505][INFO ][node                     ] [Alyssa Moy] stopping ...
+[2014-11-20 17:23:42,958][INFO ][node                     ] [Alyssa Moy] stopped
+[2014-11-20 17:23:42,959][INFO ][node                     ] [Alyssa Moy] closing ...
+[2014-11-20 17:23:43,458][INFO ][node                     ] [Alyssa Moy] closed

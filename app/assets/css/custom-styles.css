@@ -3,4 +3,141 @@
    override existing main.css stylesheets.
    ========================================================================== */ 
 
+.body {
+}
 
+
+/* ==========================================================================
+   Text Styles
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: 'gill sans', 'Open Sans', sans-serif;
+	margin: 0px;
+}
+
+h3 {
+	padding-top: 15px;
+}
+
+h4 {
+	letter-spacing: -1px;
+	color: #31363a;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+h5 {
+	padding-top: 2px;
+}
+
+h6 {
+	padding-top: 3px;
+}
+
+p {
+	line-height: 22px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #555;
+}
+
+p.intro {
+	padding-top: 10px;
+	font-size: 18px;
+	line-height: 17px;
+}
+
+p.body {
+	font-size: 20px;
+	padding-top: 15px;
+}
+
+.italicise {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.text-space {
+	padding-left: 170px;
+}
+
+/* ==========================================================================
+   Colour styles
+   ========================================================================== */
+
+.black {
+	color: #31363a;
+}
+
+.dark-gray {
+	color: #626c72;
+}
+
+.gray {
+	color: #a5b2b9;
+}
+
+.light-gray {
+	color: #dfe5e8;
+}
+
+.white {
+	color: #FFFFFF;
+}
+.orange {
+	color: #567e5c;
+}
+.full-black {
+	line-height: 23px;
+	color: #000;
+	font-weight: 400;
+}
+
+
+/* ==========================================================================
+   Navigation styles
+   ========================================================================== */
+
+.navbar {
+	background-color: #dfe5e8;
+    border-color: transparent;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+/* ==========================================================================
+   Section Styles
+   ========================================================================== */
+
+#content1 {
+	margin-top: 80px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#image-grid {
+}
+
+.margin-0 {
+    margin: 0 !important;
+}
+.margin-b-10 {
+    margin-bottom: 10px !important;
+}
+
+/* ==========================================================================
+   Media Styles
+   ========================================================================== */
+
+.thumbnail1 {
+	display: block;
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}

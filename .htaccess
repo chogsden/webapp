@@ -5,7 +5,7 @@ RewriteEngine on
 RewriteRule ^home index.php
 
 # Core asset rules:
-RewriteRule ^image(.*)$ app/assets/images/$1
+RewriteRule ^media(.*)$ app/assets/images/media/$1
 RewriteRule ^css(.*)$ app/assets/css$1
 RewriteRule ^jscript(.*)$ app/assets/js$1
 RewriteRule ^icons(.*)$ app/assets/icons$1

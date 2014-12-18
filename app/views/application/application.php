@@ -12,8 +12,8 @@
 		<?PHP echo('
 		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/font-awesome.min.css">
 		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/animate.css">
-		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/main.css">
+		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/bootstrap.css">
+		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/blueimp-gallery.css">
 		<link rel="stylesheet" href="'.$config['domain'].$config['root_dir'].'app/assets/css/custom-styles.css">
 		'); ?>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" type="text/css">
@@ -21,43 +21,20 @@
 	</head>
 	<body>
 
-		<?PHP
-		// If config [google_analytics] set: 
-		if($config['google_analytics'][0] == true AND isset($config['google_analytics'][1])) {
-		echo'
-		<!--Google Analytics-->
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push([\'_setAccount\', \''.$config['google_analytics'][1].'\']);
-			_gaq.push([\'_trackPageview\']);
-
-			(function() {
-				var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;
-				ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';
-				var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-		';}
-		?>
-
 		<?PHP 
-		// <!--Header-->
+		// <!--Google API-->
+		echo($google_analytics_content);
+
+		// <!--Header Content-->
 		echo($navbar_content);
 
-		// <!--Content-->
+		// <!--Main Content-->
 		echo($body_content);
+
+		// <!--Footer Content-->
+		echo($footer_content);
 		?>
     
-		<section id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 text-center">
-						<p>footer</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<!-- Javascript -->
 		<?PHP echo('
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

@@ -14,6 +14,17 @@
 		$command = $uri[1];
 		$section = $uri[2];
 
+		// Check MySQL config is set:
+		if(	empty($db_config['db_server']) OR
+			empty($db_config['db_user']) OR
+			empty($db_config['db_pass']) OR
+			empty($db_config['db']))
+		{
+			$mysql = false;
+		} else {
+			$mysql = true;
+		}
+
 		// Set allowed commands:
 		$command_routines = array('create', 'delete');
 
@@ -33,12 +44,12 @@
 		$routes = json_decode(file_get_contents($app_paths['routes']), true);
 
 		// Set procedure and default error logs:
-		$procedure_report = array(
-			'mvc_status' 	=>	array('response' => false),
-			'write_routes'	=>	array('response' => false),
-			'db_action1'	=>	array('response' => false),
-			'db_action2'	=>	array('response' => false),
-			'write_htaccess'=>	array('response' => false),
+		$procedure_elements = array(
+			'mvc_status',
+			'write_routes',
+			'db_action1',
+			'db_action2',
+			'write_htaccess',
 		);
 
 		// Declare functions to load for each procedure:
@@ -47,7 +58,7 @@
 			// Create / Remove MVC files:
 			'mvc_status' 	=>	array(
 								array(	'function' => 'createMVC', 
-										'args' => array($mvc_elements, $section)),
+										'args' => array($mvc_elements, $section, $mysql)),
 								array(	'function' => 'removeMVC', 
 										'args' => array($mvc_elements, $section))),
 
@@ -64,29 +75,32 @@
 										'args' => array(
 											$db_config, 
 											'CREATE',
-											'TABLE `'.$section.'` (
-											`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-											`'.$section.'` varchar(255) NOT NULL DEFAULT \'\',
-											`created_at` datetime NOT NULL DEFAULT \'0000-00-00 00:00:00\',
-											`updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-											PRIMARY KEY (`id`)) ENGINE=MyISAM DEFAULT CHARSET=utf8',
-											'',
+											'`'.$section.'` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`'.$section.'` varchar(255) NOT NULL DEFAULT \'\',`created_at` datetime NOT NULL DEFAULT \'0000-00-00 00:00:00\',`updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,PRIMARY KEY (`id`)) ENGINE=MyISAM DEFAULT CHARSET=utf8',
+											false,
+											false,
+											false,
+											false,
+											false,
 											false,
 											false)),
 								array(	'function' => 'mysqlQuery', 
-										'args' => array($db_config, 'DELETE', 'FROM '.$section, '', false, false))),
+										'args' => array($db_config, 'DELETE', false, $section,  false, false, false, false, false, false))),
 
 			'db_action2'	=>	array(
 								array(	'function' => 'mysqlQuery',
 										'args' => array(
 											$db_config, 
-											'INSERT', 
-											'INTO '.$section.' (id,'.$section.',created_at) VALUES("1","'.preg_replace('@_@', ' ', $section).' content text",CURRENT_TIMESTAMP())',
+											'INSERT',
+											'(id,'.$section.',created_at) VALUES("1","'.preg_replace('@_@', ' ', $section).' content text",CURRENT_TIMESTAMP())',
+											$section,
+											false,
+											false,
+											false,
 											'id', 
-											false, 
+											false,
 											false)),
 								array(	'function' => 'mysqlQuery',
-										'args' => array($db_config, 'DROP', 'Table '.$section, '', false, false))),
+										'args' => array($db_config, 'DROP', false, $section,  false, false, false, false, false, false))),
 								
 			// Add / Remove section to .htaccess:
 			'write_htaccess'=>	array(
@@ -98,8 +112,9 @@
 		
 
 		// Function to call each process according to section procedure:
-		function runProcess($procedure_report, $procedure, $element) {
+		function runProcess($procedure_report, $procedure, $element, $mysql) {
 			foreach($procedure_report as $process => $status) {
+//				echo($process);
 				$procedure_report[$process] = call_user_func_array($procedure[$process][$element]['function'], $procedure[$process][$element]['args']);
 			}
 			return $procedure_report;
@@ -111,6 +126,14 @@
 		// Validate user request:
 		if(isset($section) AND in_array($command, $command_routines) == true) {
 
+			// Build list of procedures:
+			foreach($procedure_elements as $procedure_type) {
+				if(substr($procedure_type, 0, -1) == 'db_action' AND $mysql == false) {
+				} else {
+					$procedure_report[$procedure_type] = array('response' => false);
+				}
+			}
+
 			// On command CREATE:
 			if($command == 'create') {
 
@@ -118,7 +141,7 @@
 				if(!isset($routes[$section])) {
 
 					// If not, run create section procedure and generate reports:
-					$procedure_report = runProcess($procedure_report, $procedure, 0);
+					$procedure_report = runProcess($procedure_report, $procedure, 0, $mysql);
 					$response = chr(10).'NEW SECTION '.$section.' GENERATED.'.chr(10).chr(10);
 
 					// On completion of procedure, check reports for process failure:
@@ -126,7 +149,7 @@
 						
 						// If a process(s) failed, roll back procedure:
 						if($status['response'] == false) {
-							$procedure_report = runProcess($procedure_report, $procedure, 1);
+							$procedure_report = runProcess($procedure_report, $procedure, 1, $mysql);
 							$response = chr(10).'ERROR --- SOMETHING WENT WRONG, SECTION NOT GENERATED!'.chr(10).chr(10);
 							break;
 						}
@@ -143,7 +166,7 @@
 				if(isset($routes[$section])) {
 
 					// If so, run remove section procedure: 
-					$procedure_report = runProcess($procedure_report, $procedure, 1);
+					$procedure_report = runProcess($procedure_report, $procedure, 1, $mysql);
 					$response = chr(10).'SECTION '.$section.' REMOVED.'.chr(10).chr(10);
 				} else {
 					$response = chr(10).'ERROR --- SECTION DOES NOT EXIST!'.chr(10).chr(10);

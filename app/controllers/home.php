@@ -4,18 +4,33 @@
 	if(isset($argv[0])) {
 		require_once('app/config/global.php');
 		require_once('app/core/functions.php');
-		$request_parameters = declareRequestParameters(array($argv[0]), '', '', '', '', '', '', '_null', '');
+		$request_parameters = declareRequestParameters(explode('/', $argv[1]), '', '', '', '', '', '', 'shared/_null', '', '');
+		$echo_output = true;
 	}
 
 	// Get data from the home model:
-	require('app/models/home.php');
+
+		/* 
+		If using MySQL model set filter here - e.g...:
+		$filter = array(
+			'id = some_value'
+		);
+		*/
+
+	require(loadMVC('model', 'home'));
 
 	// Set the display content for the view:
-	$content = $model;
 
-//	print_r($content);
+		/*
+		If returning data from MySQL model, e.g...:
+		$content['data'] = $model['records'];
+		*/
+
+	$content['data'] = $model['content'];
+
+	echoContent($echo_output, $content);
 
 	// Send the content to the view:
-	require('app/views/'.$request_parameters['route_view'].'.php');
+	require(loadMVC('view', 'home'));
 
 ?>

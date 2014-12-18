@@ -5,71 +5,105 @@
 $mvc = array(
 
 // MODEL Code:
-'model'		=>	'<?PHP 
+'model1'	=>	'<?PHP 
 	// '.strtoupper($section).' Model //
 
-	// Set rules for command-line access:
-	if(isset($argv[0])) {			
-		require_once(\'app/config/global.php\'); 
-		require_once(\'app/core/functions.php\');
-		$show_model_output = true;
-	}
+	/*	**** UN-COMMENT for MySQL data source function ****
+		// Query MySQL database and return to controller as an array:
+
+		// Used if $filter array is set in the controller
+		$sql_filter = \'\';
+		if(isset($filter)) {
+			$sql_filter = \'WHERE \'.implode(\' AND \', $filter);
+		}
+		$mysql_return = mysqlQuery(
+							$db_config,
+							
+							\'SELECT\', 
+							
+							\'id, '.$section.'\',	// FIELDS
+
+							\''.$section.'\',		// TABLE
+
+							$sql_filter,			// WHERE
+
+							\'\',					// ORDER
+
+							\'\',					// LIMIT
+							
+							\'id\',					// Primary record ID field for keys in returned data array
+							
+							false,					// Set to TRUE if requiring query execution time 
+							
+							$echo_output
+						);
+
+		// Set $model to pass returned data back to the controller:				
+		$model = $mysql_return[\'response\'];
+	*/
+
+	$model = array(
+		\'records\' => array(1 => array(\''.$section.'\' => \''.$section.' page content\'))
+	);
+
+?>',
+
+'model2'	=>	'<?PHP 
+	// '.strtoupper($section).' Model //
 
 	// Query MySQL database and return to controller as an array:
+
+	// Used if $filter array is set in the controller
 	$sql_filter = \'\';
+	if(isset($filter)) {
+		$sql_filter = \'WHERE \'.implode(\' AND \', $filter);
+	}
 	$mysql_return = mysqlQuery(
 						$db_config,
-
+						
 						\'SELECT\', 
 						
-						\'*\',
-						
-						\''.$section.'\',
+						\'id, '.$section.'\',	// FIELDS
 
-						\'\',
+						\''.$section.'\',		// TABLE
 
-						\'\',
+						$sql_filter,			// WHERE
 
-						\'\',
+						\'\',					// ORDER
+
+						\'\',					// LIMIT
 						
-						\'id\',
+						\'id\',					// Primary record ID field for keys in returned data array
 						
-						false,
+						false,					// Set to TRUE if requiring query execution time 
 						
-						$show_model_output
+						$echo_output
 					);
+
+	// Set $model to pass returned data back to the controller:				
 	$model = $mysql_return[\'response\'];
+
+	/*
+	$model = array(
+		\'records\' => array(1 => array(\''.$section.'\' => \''.$section.' page content\'))
+	);
+	*/
+
 ?>',
 
 // VIEW Code:
 'view'		=>	'<?PHP
 	// '.strtoupper($section).' View //
 
-	// Set display html for events controller:
+	// Set display html for controller:
 	$body_content = \'
 	<!--Main Content Section-->
-	<section id="page-title" class="section">
+	<section id="content1" class="section">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 text-center">
-					<h2 class="black">'.ucwords(preg_replace('@_@', ' ', $section)).'</h2>
-				</div>
+				<h3>\'.$content[\'data\'].\'</h3>
 			</div>
 		</div>
-	</section>
-
-	<section id="content2" class="section">
-	<div class="container">
-			<div class="row">
-				<div class="col-sm-12 text-center">
-
-					<!-- Section content goes here -->
-					<p>\'.$content[\''.$section.'\'].\'</p>
-
-				</div>
-			</div>
-		</div>
-
 	</section>
 	\';
 
@@ -82,21 +116,30 @@ $mvc = array(
 	// '.strtoupper($section).' Controller //
 
 	// Set rules for command-line access:
-	if(!empty($argv[1])) {
+	if(isset($argv[0])) {
 		require_once(\'app/config/global.php\');
 		require_once(\'app/core/functions.php\');
-		$request_parameters = declareRequestParameters(array($argv[0]), \'\', \'\', \'\', \'\', \'\', \'\', \'shared/_null\', \'\');
+		$request_parameters = declareRequestParameters(explode(\'/\', $argv[1]), \'\', \'\', \'\', \'\', \'\', \'\', \'shared/_null\', \'\', \'\');
+		$echo_output = true;
 	}
 
-	// Get data from the events model:
-	require(\'app/models/'.$section.'.php\');
-	
+	// Get data from the home model:
+
+		/* 
+		If using MySQL model set filter here - e.g...:
+		$filter = array(
+			\'id = some_value\'
+		);
+		*/
+
+	require(loadMVC(\'model\', \''.$section.'\'));
+
 	// Set the display content for the view:
-	$content = $model[1];
-// 	print_r($content);
+	$content[\'data\'] = $model[\'records\'][1][\''.$section.'\'];
+	echoContent($echo_output, $content);
 
 	// Send the content to the view:
-	require(\'app/views/\'.$request_parameters[\'route_view\'].\'.php\');
+	require(loadMVC(\'view\', \''.$section.'\'));
 ?>',
 
 );

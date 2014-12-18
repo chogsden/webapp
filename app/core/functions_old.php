@@ -15,12 +15,11 @@
 		$app_view = 'shared/_404';
 		$route_request = '_null';
 		$route_view = 'shared/_null';
-		$route_name = '';
 		$app_request = array();
 		$output_format = $config['allowed_output_formats']['application'];
-
-//		print_r($_SERVER);
-		$uri = explode('/', trim($_SERVER["REQUEST_URI"], '/'));
+		$client_url = trim($_SERVER["REQUEST_URI"], '/');
+//		echo($client_url);
+		$uri = explode('/', $client_url);
 		array_shift($uri);
 //		print_r($uri);
 		if(empty($uri)) {
@@ -33,9 +32,6 @@
 			$app_request = array($route_request);
 			$app_view = 'application';
 			$route_view = $route_request;
-			if(!empty($routes['navbar'])) {
-				$route_name = $routes[$client_request]['navbar']['name'];
-			}
 //			print_r($uri);
 			for($i=0; $i<count($uri); $i++) {
 				if(	!empty($uri[$i]) AND
@@ -44,7 +40,6 @@
 					if(in_array($uri[$i], $config['allowed_output_formats'])) {
 						$app_view = array_search($uri[$i], $config['allowed_output_formats']);
 						$route_view = 'shared/_null';
-						$route_name = '';
 						$output_format = $uri[$i];
 					} else {
 						$app_request[] = $uri[$i];
@@ -53,7 +48,6 @@
 					$app_view = 'shared/_404';
 					$route_request = '_null';
 					$route_view = 'shared/_null';
-					$route_name = '';
 					break;
 				}
 			}
@@ -61,12 +55,12 @@
 		} else {
 			$client_request = '_null';
 		}
-		return declareRequestParameters($app_request, $app_view, $config['domain'].$config['root_dir'].implode('/', $app_request).'/', $_SERVER["REQUEST_URI"], $client_request, $route_request, $routes[$client_request]['referer'], $route_view, $route_name, $output_format);
+		return declareRequestParameters($app_request, $app_view, $config['domain'].$config['root_dir'].implode('/', $app_request).'/', $_SERVER["REQUEST_URI"], $client_request, $route_request, $routes[$client_request]['referer'], $route_view, $output_format);
 
 	}
 
 	// Function to set core App declarations:
-	function declareRequestParameters($app_request, $app_view, $this_url, $request_uri, $client_request, $route_request, $route_referer, $route_view, $route_name, $output_format) {
+	function declareRequestParameters($app_request, $app_view, $this_url, $request_uri, $client_request, $route_request, $route_referer, $route_view, $output_format) {
 
 		$request_parameters = array(	
 			// Request properties to application:
@@ -93,42 +87,12 @@
 			// Section route view
 			'route_view'	=>	$route_view,
 
-			// Section route name
-			'route_name'	=>	$route_name,
-
 			// Format of application ouput:
 			'output_format'	=>	$output_format,
 		);
 //		print_r($request_parameters);
 		return $request_parameters;
 
-	}
-
-	// Function to call MVC module:
-	function loadMVC($type, $module) {
-		$view = $module;
-		// Prepend $module with view folder:
-		if($type == 'view') {
-			$view = $module.'/'.$module;
-			// Ignore the following view paths: encounters/x.php, x/item.php or shared/x.php:
-			preg_replace_callback(
-				'@(item|shared|template[0-9])@',
-				function($matches) use (&$view, &$module) {
-//					print_r($matches);
-					$view = $module;
-				},
-				$module
-			);
-		}
-		return 'app/'.$type.'s/'.$view.'.php';
-	}
-
-	function echoContent($echo_state, $content) {
-		if($echo_state == true) {
-			echo(chr(10));
-			print_r($content);
-			echo(chr(10));
-		}
 	}
 
 	// Function to access MySQL database:
@@ -138,23 +102,8 @@
 		mysql_select_db($db_config['db']) or die('Could not select database');
 	}
 
-	function mysqlExecute($qry, $show_time, $start_time) {
-//		echo(chr(10).$qry.chr(10));
-		$res = mysql_query($qry);
-		if($show_time == true) {
-			echo(stopMicrotime($start_time));
-		}
-		if(!$res) {
-//			echo($qry);
-			echo(chr(10).'MySQL ERROR - '.mysql_error().chr(10).chr(10));
-//			die();
-			$res = false;
-		}
-		return $res;
-	}
-
 	// Function to query MySQL database and return result:
-	function mysqlQuery($db_config, $type, $fields, $tables, $filter, $order, $limit, $id_field, $show_time, $echo_output) {
+	function mysqlQuery($db_config, $type, $fields, $tables, $filter, $order, $limit, $id_field, $show_time, $show_model_output) {
 		mysqlAccess($db_config);
 		$start_time = getMicrotime();
 		$result = false;
@@ -170,79 +119,65 @@
 			},
 			$type
 		);
-		// SELECT query:
-		if(strstr('SELECT', $type)) {
-			$echo_query = true;
-			$qry = $type.' '.$fields.' FROM '.$tables.' '.$filter.' '.$order.' '.$limit;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			$result = array();
-			if($res) {
+		$qry = $type.' '.$fields.' FROM '.$tables.' '.$filter.' '.$order.' '.$limit;
+//		echo($qry);
+		$res = mysql_query($qry);
+		if($show_time == true) {
+			echo(stopMicrotime($start_time));
+		}
+		if(!$res) {
+//			echo($type.' '.$qry);
+			echo(chr(10).'MySQL ERROR - '.mysql_error().chr(10).chr(10));
+//			die();
+		
+		} else {
+
+			// SELECT query:
+			if(strstr('SELECT', $type)) {
+				$echo_query = true;
 				if(mysql_num_rows($res) == true) {
 					while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 						$result['records'][$row[$id_field]] = $row;
 					}
+				} else {
+					$result = array();
 				}
 				if($count == true) {
 					$count_res = mysql_query('SELECT COUNT(*) as rec_count FROM '.$tables.' '.$filter);
 					$result['record_count'] = mysql_result($count_res,0, 'rec_count');
 				}
-			}
 
-		// SHOW tables:	
-		} elseif($type == 'SHOW') {
-			$qry = $type.' TABLES FROM '.$db_config['db'];
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			$result = array();
-			while($row = mysql_fetch_array($res, MYSQL_NUM)) {
-				$result[] = $row[0];
-			}
+			// SHOW query:	
+			} elseif($type == 'SHOW') {
+				$result = array();
+				while($row = mysql_fetch_array($res, MYSQL_NUM)) {
+					$result[] = $row[0];
+				}
 
-		// INSERT new record:
-		} elseif($type == 'INSERT') {
-			$qry = $type.' INTO '.$tables.''.$fields;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			if($res) {
+			// INSERT new record:
+			} elseif($type == 'INSERT') {
 				$result = mysql_insert_id();
-			}
-		
-		// UPDATE record:
-		} elseif($type == 'UPDATE') {
-			$qry = $type.' '.$tables.' '.$fields.' '.$filter;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			if($res) {
+			
+			// UPDATE or DELETE record:
+			} elseif($type == 'UPDATE' OR $type == 'DELETE') {
 				$result = 'record '.$type.'D';
-			}
 
-		// DELETE record:
-		} elseif($type == 'DELETE') {
-			$qry = $type.' FROM '.$tables;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			if($res) {
-				$result = 'record '.$type.'D';
-			}
-
-		// CREATE table:
-		} elseif($type == 'CREATE') {
-			$qry = $type.' TABLE '.$fields;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			if($res) {
+			// CREATE table:
+			} elseif($type == 'CREATE') {
 				$result = 'created table';
-			}
 
-		// DROP table:
-		} elseif($type == 'DROP') {
-			$qry = $type.' TABLE '.$tables;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			if($res) {
+			// DROP table:
+			} elseif($type == 'DROP') {
 				$result = 'deleted table';
+			
 			}
 		}
 
 		// Set screen print output for SELECT query:
-		if($echo_output AND $echo_query == true) {
+		if($show_model_output AND $echo_query == true) {
 			echo	chr(10).
 					'----------------------------------------------------------------------------------------------------------'.
-					chr(10).preg_replace('@'.chr(9).'@', '', $qry).chr(10).chr(10);
+					chr(10).preg_replace('@'.chr(9).'@', '', $type.' '.$qry).chr(10).chr(10);
 			print_r($result);
 			echo	'----------------------------------------------------------------------------------------------------------'.
 					chr(10);
@@ -263,45 +198,27 @@
 	}
 
 	// Function to update database content for html output in view:
-	function charLookup($string, $markup_rules) {
-		$find = array('@\x0a\x0a@', '@\x0a@', '@‘@', '@’@', '@-@', '@“@', '@”@', '@<dash>@');
-		$replace = array('<p /><p class="body">', '<br />', '&#8216;', '&#8217;', '&#8211;', '&#8220;', '&#8221;', '-');
-		if(!empty($markup_rules)) {
-			foreach($markup_rules as $html_element => $css) {
-				$find = array_merge($find, array('@<'.$html_element.'>@', '@</'.$html_element.'>@'));
-				$replace = array_merge($replace, array('<span class="'.$css.'">', '</span>'));
+	function charReturn($string, $lookup) {
+		$find = array('@'.chr(10).'@');
+		$replace = array('<br />');
+		if(!empty($lookup)) {
+			foreach($lookup as $field => $markup) {
+				$find = array_merge($find, $markup[0]);
+				$replace = array_merge($replace, $markup[1]);
 			}
 		}
-
+//		echo($string.chr(10));
 //		print_r($find);
 //		print_r($replace);
-		$markup_string = preg_replace($find, $replace, $string);
-//		echo($markup_string);
-		return $markup_string;
+		return preg_replace($find, $replace, $string);
 	}
 
 	// Function to generate App section MVC files:
-	function createMVC($routes, $section, $mysql) {
+	function createMVC($routes, $section) {
 		require('_system/mvc.php');
 		foreach($routes as $route) {
-			$path = 'app/'.$route.'/'.$section;
-			if($route == 'views') {
-				if (!mkdir('app/'.$route.'/'.$section, 0755, true)) {
-					$report = false;
-				}
-				$path = 'app/'.$route.'/'.$section.'/'.$section;
-			}
-			if($route == 'models') {
-				if($mysql == true) {
-					$mvc_code = $mvc['model2'];
-				} else {
-					$mvc_code = $mvc['model1'];
-				}
-			} else {
-				$mvc_code = $mvc[substr($route, 0, -1)];
-			}
-			$file = fopen($path.'.php',"w");
-			if(fwrite($file, $mvc_code)) {
+			$file = fopen('app/'.$route.'/'.$section.'.php',"w");
+			if(fwrite($file, $mvc[substr($route, 0, -1)])) {
 				$report[substr($route, 0, -1)] = 'generated';
 			} else {
 				$report = false;
@@ -314,13 +231,7 @@
 	// Function to remove App section MVC files:
 	function removeMVC($routes, $section) {
 		foreach($routes as $route) {
-			if($route == 'views') {
-				$action = unlink('app/'.$route.'/'.$section.'/'.$section.'.php');
-				$action = rmdir('app/'.$route.'/'.$section);
-			} else {
-				$action = unlink('app/'.$route.'/'.$section.'.php');
-			}
-			if($action) {
+			if(unlink('app/'.$route.'/'.$section.'.php')) {
 				$report[substr($route, 0, -1)] = 'removed';
 			} else {
 				$report = false;
@@ -338,8 +249,7 @@
 			'navbar'	=>	array(
 				'name'	=>	ucwords(preg_replace('@_@', ' ', $section)),
 				'url'	=>	strtolower($section).'/',
-				'type'	=>	'link',
-				'group'	=>	''
+				'type'	=>	'page',
 			)
 		);
 		if(fwrite($file,pretty_json(json_encode($routes)))) {

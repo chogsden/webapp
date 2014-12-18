@@ -5,7 +5,7 @@
 		$navbar_item = '
 		<li><a href="'.$config['domain'].$config['root_dir'].$url.'">'.$name.'</a></li>
 		';
-		if($id == $request AND $request != 'home') {
+		if($id == $request) {
 			$navbar_item = preg_replace('@<a href@', '<a style="color: #fff;" href', $navbar_item);
 		}
 		return $navbar_item;
@@ -44,9 +44,11 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
+				<!--
 				<a class="navbar-brand img-responsive" href="'.$content['nav_bar_logo']['url_link'].'" target="_'.$content['nav_bar_logo']['link_target'].'">
 					<img src="'.$content['nav_bar_logo']['image'].'" alt="">
 				</a>
+				-->
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-left">
