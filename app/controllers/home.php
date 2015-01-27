@@ -1,20 +1,19 @@
 <?PHP
 
-	// Set rules for command-line access:
-	if(isset($argv[0])) {
-		require_once('app/config/global.php');
-		require_once('app/core/functions.php');
-		$request_parameters = declareRequestParameters(explode('/', $argv[1]), '', '', '', '', '', '', 'shared/_null', '', '');
-		$echo_output = true;
-	}
+	// HOME Controller //
 
-	// Get data from the home model:
+	// LOAD CONTENT 
+
+		// Get data from the home model:
 
 		/* 
-		If using MySQL model set filter here - e.g...:
-		$filter = array(
-			'id = some_value'
-		);
+		If using MySQL model set filter here to return one record according to URL request:
+			http://dmain_name/root_dir/section_name/item/id...
+			
+			$search['item_id'] = $request_parameters['app_request'][2];
+			$search['condition'] = array(
+				'id = '.$search['item']
+			);
 		*/
 
 	require(loadMVC('model', 'home'));
@@ -28,7 +27,7 @@
 
 	$content['data'] = $model['content'];
 
-	echoContent($echo_output, $content);
+	echoContent($content);
 
 	// Send the content to the view:
 	require(loadMVC('view', 'home'));

@@ -9,6 +9,49 @@
 		return $client_device;
 	}
 
+	// Function to set Application request parameters:
+	function clientRequest($config) {
+
+		global $argv;
+
+		$routes = translateRoutes();
+		//	print_r($routes);
+
+		// Set application request parameters...
+
+		// If access over http:
+		if(!isset($_SERVER['argv'])) {
+			// Set default PHP Server request property if empty:
+			if(!isset($_SERVER["REQUEST_URI"])) {
+				$_SERVER["REQUEST_URI"] = '/'.$config['root_dir'].'home';
+			}
+			$GLOBALS['controller'] = 'application';
+			$GLOBALS['debug'] = false;
+
+		// if access from command line:
+		} elseif(isset($_SERVER['argv'])) {
+			$output_format = '';
+			if(isset($_SERVER['argv'][3])) {
+				$output_format =  preg_replace('@(\w)+=@', '', $_SERVER['argv'][3]);
+			}
+			$_SERVER["HTTP_USER_AGENT"] = '';
+			$GLOBALS['controller'] = preg_replace('@(\w)+=@', '', $_SERVER['argv'][1]);
+			$request = trim(preg_replace('@(page=)|((\w)+=)@', '', $_SERVER['argv'][2]), '/');
+			$_SERVER["REQUEST_URI"] = 'commandline::'.$config['root_dir'].$request.'/'.$output_format;
+			$GLOBALS['debug'] = true;
+			$config['domain'] = '';
+		}
+
+		// Set application uri request parameters:
+		$request_parameters = clientRequestValidation($config, $routes);
+		return $request_parameters;
+
+	}
+
+	function translateRoutes() {
+		return json_decode(file_get_contents('app/config/routes.json'), true);
+	}
+
 	// Function to validate client URL request parameters - used for controlling access and link navigation throughout the app:
 	function clientRequestValidation($config, $routes) {
 		
@@ -20,7 +63,7 @@
 		$output_format = $config['allowed_output_formats']['application'];
 
 //		print_r($_SERVER);
-		$uri = explode('/', trim($_SERVER["REQUEST_URI"], '/'));
+		$uri = explode('/', trim($_SERVER["REQUEST_URI"], '/') );
 		array_shift($uri);
 //		print_r($uri);
 		if(empty($uri)) {
@@ -30,10 +73,13 @@
 		}
 		if(array_key_exists($client_request, $routes)) {
 			$route_request = $routes[$client_request]['request'];
+			if(!empty($routes[$client_request]['referer'])) {
+				$route_request = $routes[$client_request]['referer'];
+			}
 			$app_request = array($route_request);
 			$app_view = 'application';
 			$route_view = $route_request;
-			if(!empty($routes['navbar'])) {
+			if(!empty($routes[$client_request]['navbar'])) {
 				$route_name = $routes[$client_request]['navbar']['name'];
 			}
 //			print_r($uri);
@@ -61,19 +107,19 @@
 		} else {
 			$client_request = '_null';
 		}
-		return declareRequestParameters($app_request, $app_view, $config['domain'].$config['root_dir'].implode('/', $app_request).'/', $_SERVER["REQUEST_URI"], $client_request, $route_request, $routes[$client_request]['referer'], $route_view, $route_name, $output_format);
+		return declareRequestParameters($app_request, $config['domain'].$config['root_dir'].implode('/', $app_request).'/', $_SERVER["REQUEST_URI"], $client_request, $route_request, $route_view, $route_name, $output_format);
 
 	}
 
 	// Function to set core App declarations:
-	function declareRequestParameters($app_request, $app_view, $this_url, $request_uri, $client_request, $route_request, $route_referer, $route_view, $route_name, $output_format) {
+	function declareRequestParameters($app_request, $this_url, $request_uri, $client_request, $route_request, $route_view, $route_name, $output_format) {
 
 		$request_parameters = array(	
 			// Request properties to application:
 			'app_request'	=>	$app_request,
 
 			// Application view:
-			'app_view'		=>	$app_view,
+//			'app_view'		=>	$app_view,
 
 			// Client URI request elements:
 			'this_url'		=>	$this_url,
@@ -86,9 +132,6 @@
 
 			// Section route requested:
 			'route_request'	=>	$route_request,
-
-			// Section route back:
-			'route_referer' =>	$route_referer,
 
 			// Section route view
 			'route_view'	=>	$route_view,
@@ -106,160 +149,320 @@
 
 	// Function to call MVC module:
 	function loadMVC($type, $module) {
-		$view = $module;
+		$module = preg_replace('@_null/item@', '_null', $module);
+		$source = $module;
+		// Set global controller assertion:
+		switch($type) {
+			case 'controller':
+				$GLOBALS['controller'] = $module;
+				break;
+			case 'model':
+				$GLOBALS['model'] = $module;
+				break;
+		}
+		if($type == 'model') {
+//			echo('controller = '.$controller);
+		}
 		// Prepend $module with view folder:
 		if($type == 'view') {
-			$view = $module.'/'.$module;
+			$source = $module.'/'.$module;
 			// Ignore the following view paths: encounters/x.php, x/item.php or shared/x.php:
 			preg_replace_callback(
 				'@(item|shared|template[0-9])@',
-				function($matches) use (&$view, &$module) {
+				function($matches) use (&$source, &$module) {
 //					print_r($matches);
-					$view = $module;
+					$source = $module;
 				},
 				$module
 			);
 		}
-		return 'app/'.$type.'s/'.$view.'.php';
+		// Output loaded module to screen:
+		if($GLOBALS['debug'] == true) {
+			echo(chr(10).'Loading '.$type.' '.$source.chr(10));
+		}
+		return 'app/'.$type.'s/'.$source.'.php';
 	}
 
-	function echoContent($echo_state, $content) {
-		if($echo_state == true) {
-			echo(chr(10));
+	function echoContent($content) {
+		if($GLOBALS['debug'] == true) {
+			echo(chr(10).
+			'CONTENT====================================================================================='.
+			chr(10));
 			print_r($content);
-			echo(chr(10));
+			echo(chr(10).
+			'============================================================================================'.
+			chr(10));
 		}
+	}
+
+	function setModelParameters($search) {
+		$criteria = array('item_id', 'condition', 'limit', 'order', 'mode', 'fields');
+		foreach($criteria as $clause) {
+			if(!isset($search[$clause])) {
+				$search[$clause] = false;
+			}
+		}
+		return $search;
+	}
+
+	// Function to query MySQL database and return result:
+	function mysqlQuery($db_config, $request) {
+		$mysql = mysqlAccess($db_config);
+		$start_time = getMicrotime();
+//		$show_time = true;
+
+		if(!isset($request['mode'])) {
+			$request['mode'] = 'SELECT';
+		}
+		$request['model'] = $GLOBALS['model'];
+		if($GLOBALS['debug'] == true) {
+//			print_r($request);
+		}
+
+		$db_result = buildQuery($mysql, $request, $start_time);
+
+		// Return MySQL query result and query:
+		return array('result' => $db_result['result'], 'query' => $db_result['query']);
+		
+		// Close MySQL connection:
+		$mysql->close();
 	}
 
 	// Function to access MySQL database:
 	function mysqlAccess($db_config) {
-		mysql_connect($db_config['db_server'],$db_config['db_user'],$db_config['db_pass']) or exit();
-		mysql_query('SET NAMES utf8');
-		mysql_select_db($db_config['db']) or die('Could not select database');
+		$mysql = new mysqli($db_config['db_server'], $db_config['db_user'], $db_config['db_pass'], $db_config['db']);
+		// Check for MySQL connection: 
+		if ($mysql->connect_error) {
+		    printf("Connect to MySQL database failed: %s\n", mysqli_connect_error());
+		    exit();
+		}
+		return($mysql);
 	}
 
-	function mysqlExecute($qry, $show_time, $start_time) {
-//		echo(chr(10).$qry.chr(10));
-		$res = mysql_query($qry);
-		if($show_time == true) {
-			echo(stopMicrotime($start_time));
-		}
-		if(!$res) {
-//			echo($qry);
-			echo(chr(10).'MySQL ERROR - '.mysql_error().chr(10).chr(10));
-//			die();
-			$res = false;
-		}
-		return $res;
-	}
+	// MySQL Query generator:
+	function buildQuery($mysql, $request, $start_time) {
 
-	// Function to query MySQL database and return result:
-	function mysqlQuery($db_config, $type, $fields, $tables, $filter, $order, $limit, $id_field, $show_time, $echo_output) {
-		mysqlAccess($db_config);
-		$start_time = getMicrotime();
+		$query = array();
 		$result = false;
-		$echo_query = false;
-//		$show_time = true;
-		$count = '';
-		$check_for_count = preg_replace_callback(
-			'@(SELECT) (COUNT)@',
-			function($matches) use (&$type, &$count) {
-//				print_r($matches);
-				$type = $matches[1];
-				$count = $matches[2];
-			},
-			$type
-		);
-		// SELECT query:
-		if(strstr('SELECT', $type)) {
-			$echo_query = true;
-			$qry = $type.' '.$fields.' FROM '.$tables.' '.$filter.' '.$order.' '.$limit;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			$result = array();
-			if($res) {
-				if(mysql_num_rows($res) == true) {
-					while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
-						$result['records'][$row[$id_field]] = $row;
-					}
-				}
-				if($count == true) {
-					$count_res = mysql_query('SELECT COUNT(*) as rec_count FROM '.$tables.' '.$filter);
-					$result['record_count'] = mysql_result($count_res,0, 'rec_count');
-				}
-			}
+		$response = '';
 
-		// SHOW tables:	
-		} elseif($type == 'SHOW') {
-			$qry = $type.' TABLES FROM '.$db_config['db'];
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			$result = array();
-			while($row = mysql_fetch_array($res, MYSQL_NUM)) {
-				$result[] = $row[0];
-			}
+		switch($request['mode']) {
 
-		// INSERT new record:
-		} elseif($type == 'INSERT') {
-			$qry = $type.' INTO '.$tables.''.$fields;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			if($res) {
-				$result = mysql_insert_id();
-			}
+			case 'SELECT':
+			case 'SELECT COUNT':
+				$query = array(
+					 'SELECT DISTINCT SQL_CALC_FOUND_ROWS '.sqlReturn($request).' FROM '.sqlRoute($request),
+					sqlCondition($request),
+					sqlLimit($request).' '.sqlOrder($request)
+				);
+				break;
 		
-		// UPDATE record:
-		} elseif($type == 'UPDATE') {
-			$qry = $type.' '.$tables.' '.$fields.' '.$filter;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			if($res) {
-				$result = 'record '.$type.'D';
-			}
+			case 'INSERT':
+				$query = array(
+					'INSERT INTO '.$request['model'],
+					sqlInsertFields($request),
+					sqlCondition($request)
+				);
+				break;
 
-		// DELETE record:
-		} elseif($type == 'DELETE') {
-			$qry = $type.' FROM '.$tables;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			if($res) {
-				$result = 'record '.$type.'D';
-			}
+			case 'CREATE':
+				$query = array(
+					'CREATE TABLE `'.$request['model'].'`',
+					sqlCreateFields($request),
+					'ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci'
+				);
+				$response = 'created table';
+				break;
 
-		// CREATE table:
-		} elseif($type == 'CREATE') {
-			$qry = $type.' TABLE '.$fields;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			if($res) {
-				$result = 'created table';
-			}
+			case 'DELETE':
+				$query = array(
+					'DELETE FROM `'.$request['model'].'`',
+					sqlCondition($request)
+				);
+				$response = 'record(s) deleted';
+				break;
 
-		// DROP table:
-		} elseif($type == 'DROP') {
-			$qry = $type.' TABLE '.$tables;
-			$res = mysqlExecute($qry, $show_time, $start_time);
-			if($res) {
-				$result = 'deleted table';
-			}
+			case 'DROP':
+				$query = array(
+					'DROP TABLE `'.$request['model'].'`'
+				);
+				$response = 'table removed';
+				break;
 		}
 
-		// Set screen print output for SELECT query:
-		if($echo_output AND $echo_query == true) {
+		$query = preg_replace('@'.chr(9).'@', '', implode(' ', $query));
+		$mysqlresult = mysqlExecute($request, $mysql, $query, $start_time, $response);
+//		print_r($mysqlresult);
+
+		// Print query output to command line:
+		if($GLOBALS['debug']) {
 			echo	chr(10).
-					'----------------------------------------------------------------------------------------------------------'.
-					chr(10).preg_replace('@'.chr(9).'@', '', $qry).chr(10).chr(10);
-			print_r($result);
-			echo	'----------------------------------------------------------------------------------------------------------'.
+					'MySQL======================================================================================='.
+					chr(10).$query.chr(10).chr(10);
+			print_r($mysqlresult['result']);
+			echo 	'============================================================================================'.
 					chr(10);
 		}
 
-		// Return MySQL query result and query:
-		return array('response' => $result, 'query' => preg_replace('@[\s]+@', ' ', $type.' '.$qry));
-		mysql_close();
+		return array('result' => $mysqlresult['result'], 'query' => $query);
 	}
 
+	// MySQL execute query procedure:
+	function mysqlExecute($request, $mysql, $query, $start_time, $response) {
+		$result = false;
+//		echo(chr(10).$query.chr(10));
+		if($mysqlresult = $mysql->query($query)) {
+			$time = stopMicrotime($start_time);
+
+			switch($request['mode']) {
+				case 'SELECT':
+				case 'SELECT COUNT':
+					if($mysqlresult->num_rows == true) {
+						while($row = $mysqlresult->fetch_array(MYSQLI_ASSOC)) {
+							$result['records'][$row['id']] = $row;
+						}
+					}
+					$response = $mysqlresult->num_rows.' record(s) retrieved';
+
+					if($request['mode'] == 'SELECT COUNT') {
+						$count_query = 'SELECT FOUND_ROWS() as record_count';
+//						echo(chr(10).$count_query.chr(10));
+						$countresult = $mysql->query($count_query);
+						while($row = $countresult->fetch_array(MYSQLI_ASSOC)) {
+							$result['record_count'] = $row['record_count'];
+						}
+					}
+					$mysqlresult->close();
+					break;
+
+				case 'INSERT':
+					$response = 'created record with id = '.$mysql->insert_id;
+					break;
+			}
+			$result['response'] = $response;
+			return array('result' => $result, 'execution_time' => $time);
+		
+		} else {
+			echo(chr(10).'MySQL ERROR - '.$mysql->error.chr(10).chr(10));
+//			die();
+			return array('result' => false, 'execcution_time' => 0);
+		}
+	}
+
+	// SQL query WHERE statement:
+	function sqlCondition($request) {
+		$sql_condition = '';
+		if(isset($request['condition'])) {
+			$sql_condition = 'WHERE '.implode(' AND ', $request['condition']);
+		}
+		return $sql_condition;
+	}
+
+	// SQL query TABLE and JOIN statement:
+	function sqlRoute($request) {
+		$sql_route = $request['model'];
+		if(isset($request['route'])) {
+			$join_statement = array(0 => $request['model']);
+			foreach($request['route'] as $table => $rules) {
+				$join[2] = $table;
+				$join[3] = 'ON';
+				if(isset($rules['to_get'])) {
+					$join[4] = $request['model'].'.id = '.$rules['using'];
+					$relationship = $rules['to_get'];
+				} elseif(isset($rules['belongs_to'])) {
+					$join[4] = $rules['using'].' = '.$table.'.id';
+					$relationship = $rules['belongs_to'];
+				}
+				$join[1] = preg_replace(array('@many_records@', '@one_record@'), array('LEFT JOIN', 'JOIN'), $relationship);
+				ksort($join);
+				if(isset($rules['condition'])) {
+					array_splice($join, 3, 0, '(');
+					$join[] = 'AND '.$rules['condition'].' )';
+				}
+//				print_r($join);
+				$join_statement[] = implode(' ', $join);
+			}
+			$sql_route = implode(' ', $join_statement);
+		}
+		return $sql_route;
+	}
+
+	// SQL query FIELDS statement:
+	function sqlReturn($request) {
+		$sql_return = $request['model'].'.*';
+		if(isset($request['return'])) {
+			$return = array($request['model'].'.id');
+			foreach($request['return'] as $field => $new_field) {
+				if(!empty($new_field)) {
+					$field = $field.' AS '.$new_field;
+				}
+				$return[] = $field;
+			}
+			$sql_return = implode(', ', $return);
+		}
+		return $sql_return;
+	}
+
+	// SQL query LIMIT statement:
+	function sqlLimit($request) {
+		$sql_limit = '';
+		if(isset($request['limit'])) {
+			$sql_limit = 'LIMIT '.implode(',', $request['limit']);
+		}
+		return $sql_limit;
+	}
+
+	// SQL query ORDER BY statement:
+	function sqlOrder($request) {
+		if(!isset($request['order'])) {
+			$request['order'] = array($request['model'].'.id');
+		}
+		$sql_order = 'ORDER BY '.implode(',', $request['order']);
+		return $sql_order;
+	}
+
+	// SQL query CREATE FIELDS statement:
+	function sqlCreateFields($request) {
+		$sql_create_fields = array(
+			'`id` int(11) unsigned NOT NULL AUTO_INCREMENT',
+			'`created_at` datetime NOT NULL DEFAULT \'0000-00-00 00:00:00\'',
+			'`updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'
+		);
+		if(isset($request['fields'])) {
+			$field_structure = array();
+			foreach($request['fields'] as $field => $value) {
+				$field_structure[$field] = '`'.$field.'` '.$value;
+			}
+			array_splice($sql_create_fields, 1, 0, implode(', ', $field_structure));
+		}
+		$sql_create_fields[] = 'PRIMARY KEY (`id`)';
+		return '('.implode(', ',$sql_create_fields).')';
+	}
+
+	// SQL query INSERT FIELDS statement:
+	function sqlInsertFields($request) {
+		$insert_fields = array('id');
+		$insert_data = array('null');
+		if(isset($request['fields'])) {
+			foreach($request['fields'] as $field => $data) {
+				$insert_fields[] = $field;
+				$insert_data[] = $data;
+			}
+		}
+		$insert_fields[] = 'created_at';
+		$insert_data[] = 'CURRENT_TIMESTAMP()';
+		return '('.implode(', ',$insert_fields).') VALUES('.implode(', ', $insert_data).')';
+	}
+
+	// Query START execution time:
 	function getMicrotime() {
 		$microtime_start = null;
 		return (microtime(true) - $microtime_start);
 	}
 
+	// Query GET execution time - ( NOTE: doesn't work for CREATE TABLE qeries):
 	function stopMicrotime($start_time) {
-		return chr(10). (number_format((getMicrotime() - $start_time), 6) * 1000). chr(10);
+		return number_format((getMicrotime() - $start_time), 6) * 1000;
 	}
 
 	// Function to update database content for html output in view:
@@ -284,31 +487,34 @@
 	function createMVC($routes, $section, $mysql) {
 		require('_system/mvc.php');
 		foreach($routes as $route) {
-			$path = 'app/'.$route.'/'.$section;
+			$path = array();
 			if($route == 'views') {
 				if (!mkdir('app/'.$route.'/'.$section, 0755, true)) {
 					$report = false;
 				}
-				$path = 'app/'.$route.'/'.$section.'/'.$section;
-			}
-			if($route == 'models') {
+				$path['view1'] = 'app/'.$route.'/'.$section.'/'.$section;
+				$path['view2'] = 'app/'.$route.'/'.$section.'/item';
+				$mvc_code['view1'] = $mvc['view1'];
+				$mvc_code['view2'] = $mvc['view2'];
+			} else {
+				$path[$route] = 'app/'.$route.'/'.$section;
+				$version = 1;
 				if($mysql == true) {
-					$mvc_code = $mvc['model2'];
-				} else {
-					$mvc_code = $mvc['model1'];
+					$version = 2;
 				}
-			} else {
-				$mvc_code = $mvc[substr($route, 0, -1)];
+				$mvc_code[$route] = $mvc[substr($route, 0, -1).$version];
 			}
-			$file = fopen($path.'.php',"w");
-			if(fwrite($file, $mvc_code)) {
-				$report[substr($route, 0, -1)] = 'generated';
-			} else {
-				$report = false;
+			foreach($path as $file_name => $file_path) {
+				$file = fopen($path[$file_name].'.php',"w");
+				if(fwrite($file, $mvc_code[$file_name])) {
+					$report[substr($route, 0, -1)] = 'generated';
+				} else {
+					$report = false;
+				}
+				fclose($file);
 			}
-			fclose($file);
  		} 
- 		return array('response' => $report);
+ 		return array('result' => array('response' => $report));
 	}
 
 	// Function to remove App section MVC files:
@@ -316,6 +522,7 @@
 		foreach($routes as $route) {
 			if($route == 'views') {
 				$action = unlink('app/'.$route.'/'.$section.'/'.$section.'.php');
+				$action = unlink('app/'.$route.'/'.$section.'/item.php');
 				$action = rmdir('app/'.$route.'/'.$section);
 			} else {
 				$action = unlink('app/'.$route.'/'.$section.'.php');
@@ -326,7 +533,7 @@
 				$report = false;
 			}
 		}
-		return array('response' => $report);
+		return array('result' => array('response' => $report));
 	}
 
 	// Function to generate section in App Routes: 
@@ -337,7 +544,6 @@
 			'referer'	=>	'',
 			'navbar'	=>	array(
 				'name'	=>	ucwords(preg_replace('@_@', ' ', $section)),
-				'url'	=>	strtolower($section).'/',
 				'type'	=>	'link',
 				'group'	=>	''
 			)
@@ -348,7 +554,7 @@
 			$report = false;
 		}
 		fclose($file);
-		return array('response' => $report);
+		return array('result' => array('response' => $report));
 	}
 
 	// Function to remove section from App Routes: 
@@ -361,7 +567,7 @@
 			$report = false;
 		}
 		fclose($file);
-		return array('response' => $report);
+		return array('result' => array('response' => $report));
 	}
 
 	// Function to output readable JSON:
@@ -433,7 +639,7 @@
 			$report = false;
 		}
 		fclose($file);
-		return array('response' => $report);
+		return array('result' => array('response' => $report));
 	}
 
 ?>

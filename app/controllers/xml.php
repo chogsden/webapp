@@ -1,19 +1,10 @@
 <?PHP
 
-	// Set rules for command-line access:
-	if(!empty($argv[1])) {
-		require_once('app/config/global.php');
-	}
+	// XML controller //
 
-
-	// XML structure routines according to content:
-
-
-	// --- *
-
-	$output = '';
+	$xml_output = '';
 	
 	// Send the content to the view:
-	require('app/views/shared/xml.php');
+	require(loadMVC('view', 'shared/xml'));
 
 ?>

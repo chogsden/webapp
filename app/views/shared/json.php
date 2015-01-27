@@ -1,5 +1,5 @@
 <?PHP
 
-	echo($output);
+	echo($json_output);
 
 ?>

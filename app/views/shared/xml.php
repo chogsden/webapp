@@ -1,5 +1,5 @@
 <?PHP
 
-	echo($output);
+	echo($xml_output);
 
 ?>

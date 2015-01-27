@@ -17,11 +17,16 @@
 	// Set navbar menu items:
 
 	$content['navbar']['home'] = '';
+	$routes = translateRoutes();
 
 	// Get data from routes:
 	foreach($routes as $id => $route) {
 		if(isset($route['navbar'])) {
 			$data = $route['navbar'];
+			$url = '';
+			if($route['request'] != 'home') {
+				$url = $route['request'];
+			}
 			
 			// Set view navbar with a sngle page link:
 			if($data['type'] == 'link') {
@@ -30,9 +35,9 @@
 				if(!empty($data['group'])) {
 					$content['navbar'][$data['group']]['type'] = 'list';
 					$content['navbar'][$data['group']]['name'] = $data['group'];
-					$content['navbar'][$data['group']]['items'][$id] = array('url' => $data['url'], 'name' => $data['name']);
+					$content['navbar'][$data['group']]['items'][$id] = array('url' => $route['request'], 'name' => $data['name']);
 				} else {
-					$content['navbar'][$id] = array('type' => 'link', 'url' => $data['url'], 'name' => $data['name']);
+					$content['navbar'][$id] = array('type' => 'link', 'url' => $url, 'name' => $data['name']);
 				}
 
 			// Set view navbar with a menu of sub-section links:
@@ -43,7 +48,7 @@
 				// Where the menu items are listed in app/core/routes.json:
 				if($data['source']['type'] == 'list') {
 					foreach($data['source']['items'] as $item_id => $item) {
-						$content['navbar'][$id]['items'][$item_id] = array('url' => $data['url'].$item_id, 'name' => $item['name']);
+						$content['navbar'][$id]['items'][$item_id] = array('url' => $route['request'].$item_id, 'name' => $item['name']);
 					}
 
 				// Where the menu items are in a database table and accessd via a model:	
@@ -51,7 +56,7 @@
 					$data_filter = 0;
 					require('app/models/'.$data['source']['model']['name'].'.php');
 					foreach($model as $item_id => $item) {
-						$content['navbar'][$id]['items'][] = array('url' => $data['url'].$item_id, 'name' => $item[$data['source']['model']['field']]);
+						$content['navbar'][$id]['items'][] = array('url' => $route['request'].$item_id, 'name' => $item[$data['source']['model']['field']]);
 					}
 				}
 			}

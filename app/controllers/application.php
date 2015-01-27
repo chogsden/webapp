@@ -1,24 +1,8 @@
 <?PHP
 
-	$echo_output = false;
+	// APPLICATION Controller //
 
-	// Set rules for command-line access:
-	if(isset($argv[0])) {
-		require_once('app/config/global.php');
-		require_once('app/core/functions.php');
-		$_SERVER["HTTP_USER_AGENT"] = '';
-		if(empty($argv[2])) {
-			$argv[2] = 'html';
-		}
-		$request_parameters = declareRequestParameters(explode('/', $argv[1]), 'application', '', '', '', $argv[1], '', '', '', $argv[2]);
-		$request_parameters['route_request'] = $request_parameters['app_request'][0];
-		$request_parameters['route_view'] = $request_parameters['app_request'][0];
-		$routes = json_decode(file_get_contents('app/config/routes.json'), true);
-		unset($argv[0]);
-		$echo_output = true;
-	}
-
-	//Establish client device type:
+	// Establish client device type:
 	if(!empty($config['mobile_agents'])) {
 		$client_device = clientDevice($config['mobile_agents'], $_SERVER["HTTP_USER_AGENT"]);
 	}
@@ -31,13 +15,11 @@
 	$footer_content = '';
 	$js_content = '';
 
-	// Load any common rules:
-	require(loadMVC('helper', 'application'));
-
-	// Request section controller:
+	// Request Section controller:
 	require(loadMVC('controller', $request_parameters['route_request']));
 
-/*	Client browser caching to do:
+/*	
+	// Client browser caching to do:
 	$mod_time = filemtime($image_path.'tiny/'.$filename);
 	$expires = 604800;
 
@@ -69,6 +51,8 @@
 		// Set up navbar:
 		require(loadMVC('helper', 'navbar'));
 
+		echoContent($content);
+
 		// Get navbar display:
 		require(loadMVC('view', 'shared/navbar'));
 
@@ -80,7 +64,7 @@
 			// require(loadMVC('view', 'shared/footer'));
 
 		// If html is expected, send display content to application view:
-		require(loadMVC('view', $request_parameters['app_view']));
+		require(loadMVC('view', 'application'));
 
 	} else {
 

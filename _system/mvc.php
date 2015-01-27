@@ -5,46 +5,15 @@
 $mvc = array(
 
 // MODEL Code:
-'model1'	=>	'<?PHP 
+'model1'	=>	'
+<?PHP 
 	// '.strtoupper($section).' Model //
 
-	/*	**** UN-COMMENT for MySQL data source function ****
-		// Query MySQL database and return to controller as an array:
-
-		// Used if $filter array is set in the controller
-		$sql_filter = \'\';
-		if(isset($filter)) {
-			$sql_filter = \'WHERE \'.implode(\' AND \', $filter);
-		}
-		$mysql_return = mysqlQuery(
-							$db_config,
-							
-							\'SELECT\', 
-							
-							\'id, '.$section.'\',	// FIELDS
-
-							\''.$section.'\',		// TABLE
-
-							$sql_filter,			// WHERE
-
-							\'\',					// ORDER
-
-							\'\',					// LIMIT
-							
-							\'id\',					// Primary record ID field for keys in returned data array
-							
-							false,					// Set to TRUE if requiring query execution time 
-							
-							$echo_output
-						);
-
-		// Set $model to pass returned data back to the controller:				
-		$model = $mysql_return[\'response\'];
-	*/
-
 	$model = array(
-		\'records\' => array(1 => array(\''.$section.'\' => \''.$section.' page content\'))
-	);
+		\'records\' => array(
+			1 => array(
+				\'title\' => \''.ucfirst(preg_replace('@_@', ' ', $section)).'\',
+				\'content\' => \''.preg_replace('@_@', ' ', $section).' page content\',)));
 
 ?>',
 
@@ -53,47 +22,65 @@ $mvc = array(
 
 	// Query MySQL database and return to controller as an array:
 
-	// Used if $filter array is set in the controller
-	$sql_filter = \'\';
-	if(isset($filter)) {
-		$sql_filter = \'WHERE \'.implode(\' AND \', $filter);
-	}
-	$mysql_return = mysqlQuery(
-						$db_config,
-						
-						\'SELECT\', 
-						
-						\'id, '.$section.'\',	// FIELDS
+		$search = setModelParameters($search);
+		
+		// Set Config for data query parameters:
+		$search_list = array(
 
-						\''.$section.'\',		// TABLE
+			// Model request for Media Items:
+			\'item\' => array(
 
-						$sql_filter,			// WHERE
+				\'condition\'	=> array(\'id = \'.$search[\'item_id\']),
+				\'return\'	=> array(\'content\' => \'\')),
 
-						\'\',					// ORDER
+			\'all_items\' => array(
 
-						\'\',					// LIMIT
-						
-						\'id\',					// Primary record ID field for keys in returned data array
-						
-						false,					// Set to TRUE if requiring query execution time 
-						
-						$echo_output
-					);
+				\'mode\'		=> \'SELECT COUNT\')
+				
+		);
 
-	// Set $model to pass returned data back to the controller:				
-	$model = $mysql_return[\'response\'];
+		$timestamp = false;	// Set to true to return model process time
+
+		// ------------------------------------------------------
+		
+		// Select query:
+		switch($GLOBALS[\'controller\']) {
+			case \''.$section.'\': if($search[\'item_id\'] == true) { $request = $search_list[\'item\']; break; }
+			default: $request = $search_list[\'all_items\']; break;
+		}
+
+		// Query MySQL database and return to controller as an array:
+
+		$mysql_return = mysqlQuery(
+							$db_config,
+							$request
+						);
+
+		$model = $mysql_return[\'result\'];
 
 	/*
-	$model = array(
-		\'records\' => array(1 => array(\''.$section.'\' => \''.$section.' page content\'))
-	);
+
+		// Default content return to contrller:
+		$model = array(
+			\'records\' => array(1 => array(\''.$section.'\' => \''.$section.' page content\'))
+		);
+
 	*/
 
 ?>',
 
 // VIEW Code:
-'view'		=>	'<?PHP
+'view1'		=>	'
+<?PHP
 	// '.strtoupper($section).' View //
+
+	foreach($content[\'data\'][\'records\'] as $id => $record) {
+		$items[$id] = \'
+		<a href="\'.$config[\'domain\'].$config[\'root_dir\'].\''.$section.'/item/\'.$id.\'">
+			<h3>\'.$record[\'title\'].\'</h3>
+		</a>
+		\';
+	}
 
 	// Set display html for controller:
 	$body_content = \'
@@ -101,45 +88,79 @@ $mvc = array(
 	<section id="content1" class="section">
 		<div class="container">
 			<div class="row">
-				<h3>\'.$content[\'data\'].\'</h3>
+				<h3>\'.implode(\'<br /><br />\', $items).\'</h3>
 			</div>
 		</div>
 	</section>
 	\';
 
-	// Set additional javascript for application controller:
+	// Set additional javascript:
+	$js_content = \'\';
+?>',
+
+'view2'		=>	'
+<?PHP
+	// '.strtoupper($section).' ITEM View //
+
+	// Set display html for controller:
+	$body_content = \'
+	<!--Main Content Section-->
+	<section id="content1" class="section">
+		<div class="container">
+			<div class="row">
+				<h3>\'.$content[\'data\'][\'records\'][$search[\'item_id\']][\'content\'].\'</h3>
+			</div>
+		</div>
+	</section>
+	\';
+
+	// Set additional javascript:
 	$js_content = \'\';
 ?>',
 
 // CONTROLLER Code:
-'controller' => '<?PHP
+'controller1' => '
+<?PHP
 	// '.strtoupper($section).' Controller //
 
-	// Set rules for command-line access:
-	if(isset($argv[0])) {
-		require_once(\'app/config/global.php\');
-		require_once(\'app/core/functions.php\');
-		$request_parameters = declareRequestParameters(explode(\'/\', $argv[1]), \'\', \'\', \'\', \'\', \'\', \'\', \'shared/_null\', \'\', \'\');
-		$echo_output = true;
-	}
-
-	// Get data from the home model:
-
-		/* 
-		If using MySQL model set filter here - e.g...:
-		$filter = array(
-			\'id = some_value\'
-		);
-		*/
-
+	// Get data from the SECTION model:
 	require(loadMVC(\'model\', \''.$section.'\'));
-
+	
 	// Set the display content for the view:
-	$content[\'data\'] = $model[\'records\'][1][\''.$section.'\'];
-	echoContent($echo_output, $content);
+	$content[\'data\'] = $model;
+	
+	echoContent($content);
 
 	// Send the content to the view:
 	require(loadMVC(\'view\', \''.$section.'\'));
+
+?>',
+
+'controller2' => '
+<?PHP
+	// '.strtoupper($section).' Controller //
+
+	$search = array();
+	$view_path = \''.$section.'\';
+	if(isset($request_parameters[\'app_request\'][2])) {
+		$search[\'item_id\'] = $request_parameters[\'app_request\'][2];
+		$search[\'condition\'] = array(
+			\'id = \'.$search[\'item_id\']
+		);
+		$view_path .= \'/item\';
+	}
+
+	// Get data from the SECTION model:
+	require(loadMVC(\'model\', \''.$section.'\'));
+	
+	// Set the display content for the view:
+	$content[\'data\'] = $model;
+	
+	echoContent($content);
+
+	// Send the content to the view:
+	require(loadMVC(\'view\', $view_path));
+
 ?>',
 
 );
