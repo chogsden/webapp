@@ -236,6 +236,7 @@
 		    printf("Connect to MySQL database failed: %s\n", mysqli_connect_error());
 		    exit();
 		}
+		$mysql->query('SET NAMES utf8');
 		return($mysql);
 	}
 
