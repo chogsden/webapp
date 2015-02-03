@@ -37,10 +37,12 @@
 			$_SERVER["HTTP_USER_AGENT"] = '';
 			$GLOBALS['controller'] = preg_replace('@(\w)+=@', '', $_SERVER['argv'][1]);
 			$request = trim(preg_replace('@(page=)|((\w)+=)@', '', $_SERVER['argv'][2]), '/');
-			$_SERVER["REQUEST_URI"] = 'commandline::'.$config['root_dir'].$request.'/'.$output_format;
+			$_SERVER["REQUEST_URI"] = trim('commandline::'.$config['root_dir'].$request, '/').'/'.$output_format;
 			$GLOBALS['debug'] = true;
 			$config['domain'] = '';
 		}
+		$GLOBALS['request_uri'] = $_SERVER['REQUEST_URI'];
+//		print_r($GLOBALS);
 
 		// Set application uri request parameters:
 		$request_parameters = clientRequestValidation($config, $routes);
@@ -62,16 +64,16 @@
 		$app_request = array();
 		$output_format = $config['allowed_output_formats']['application'];
 
-//		print_r($_SERVER);
-		$uri = explode('/', trim($_SERVER["REQUEST_URI"], '/') );
-		array_shift($uri);
+		$uri = explode('/', trim(preg_replace('@'.$config['root_dir'].'|commandline::@', '', $GLOBALS["request_uri"]), '/') );
 //		print_r($uri);
-		if(empty($uri)) {
+		if(empty($uri[0])) {
 			$client_request = '/';
+			$uri[0] = 'home';
 		} else {
 			$client_request = array_shift($uri);
 		}
 		if(array_key_exists($client_request, $routes)) {
+//			print_r($routes[$client_request]);
 			$route_request = $routes[$client_request]['request'];
 			if(!empty($routes[$client_request]['referer'])) {
 				$route_request = $routes[$client_request]['referer'];
@@ -107,7 +109,7 @@
 		} else {
 			$client_request = '_null';
 		}
-		return declareRequestParameters($app_request, $config['domain'].$config['root_dir'].implode('/', $app_request).'/', $_SERVER["REQUEST_URI"], $client_request, $route_request, $route_view, $route_name, $output_format);
+		return declareRequestParameters($app_request, $config['domain'].$config['root_dir'].implode('/', $app_request).'/', $GLOBALS["request_uri"], $client_request, $route_request, $route_view, $route_name, $output_format);
 
 	}
 
@@ -216,7 +218,7 @@
 		}
 		$request['model'] = $GLOBALS['model'];
 		if($GLOBALS['debug'] == true) {
-//			print_r($request);
+			print_r($request);
 		}
 
 		$db_result = buildQuery($mysql, $request, $start_time);
@@ -254,7 +256,7 @@
 				$query = array(
 					 'SELECT DISTINCT SQL_CALC_FOUND_ROWS '.sqlReturn($request).' FROM '.sqlRoute($request),
 					sqlCondition($request),
-					sqlLimit($request).' '.sqlOrder($request)
+					sqlOrder($request).' '.sqlLimit($request)
 				);
 				break;
 		
@@ -416,9 +418,13 @@
 	// SQL query ORDER BY statement:
 	function sqlOrder($request) {
 		if(!isset($request['order'])) {
-			$request['order'] = array($request['model'].'.id');
+			$request['order'] = array($request['model'].'.id' => '');
 		}
-		$sql_order = 'ORDER BY '.implode(',', $request['order']);
+		$order_array = array();
+		foreach($request['order'] as $field => $type) {
+			$order_array[] = $field.' '.$type;
+		}
+		$sql_order = 'ORDER BY '.implode(',', $order_array);
 		return $sql_order;
 	}
 
