@@ -126,5 +126,5 @@ Command-line output from the app for development and debugging is enabled. In Un
 
 **** WARRANTY ****
 
-This code-base carries no warranty, by using this code the user assumes all liabilities and responsibility for their use of the contents of this repository.
+This code-base carries no warranty, by using this code the user assumes all liabilities and responsibility for their installation and use of the contents of this repository.
 			
